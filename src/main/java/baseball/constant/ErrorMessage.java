@@ -1,4 +1,4 @@
-package baseball.exception;
+package baseball.constant;
 
 public enum ErrorMessage {
     INVALID_LENGTH("3개의 숫자를 입력해야 합니다."),

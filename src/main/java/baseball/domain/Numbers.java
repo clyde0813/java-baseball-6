@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import baseball.exception.ErrorMessage;
+import baseball.constant.ErrorMessage;
 
 public class Numbers {
 

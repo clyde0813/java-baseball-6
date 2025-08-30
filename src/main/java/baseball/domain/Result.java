@@ -1,6 +1,6 @@
 package baseball.domain;
 
-import baseball.exception.CommonMessage;
+import baseball.constant.CommonMessage;
 
 public class Result {
 

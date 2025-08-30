@@ -1,7 +1,7 @@
 package baseball.view;
 
 import baseball.domain.Result;
-import baseball.exception.CommonMessage;
+import baseball.constant.CommonMessage;
 
 public class OutputView {
     
