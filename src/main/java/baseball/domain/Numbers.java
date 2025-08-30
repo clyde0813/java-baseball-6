@@ -49,4 +49,9 @@ public class Numbers {
     public int get(int index) {
         return values.get(index);
     }
+
+    // value 포함 여부
+    public boolean contains(int value) {
+        return values.contains(value);
+    }
 }

@@ -1,18 +1,15 @@
 package baseball.view;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import baseball.exception.ErrorMessage;
 import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
 
-    public String inputNumber() {
+    public static String inputNumber() {
         return Console.readLine();
     };
 
-    public boolean checkRestart() {
+    public static boolean checkRestart() {
         String input = Console.readLine();
 
         if(!input.equals("1") && !input.equals("2")) {

@@ -13,6 +13,6 @@ public class OutputView {
     };
 
     public static void printGameResult(Result result) {
-
+        System.out.println(result.toString());
     };
 }
