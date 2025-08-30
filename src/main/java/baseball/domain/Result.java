@@ -1,5 +1,7 @@
 package baseball.domain;
 
+import baseball.exception.CommonMessage;
+
 public class Result {
 
     private final int strikes;
@@ -24,11 +26,11 @@ public class Result {
 
     @Override
     public String toString() {
-        if(strikes + balls == 0) return "낫싱";
+        if(strikes + balls == 0) return CommonMessage.GAME_NOTHING.getMessage();
 
         StringBuilder sb = new StringBuilder();
-        if(balls > 0) sb.append(balls).append("볼 ");
-        if(strikes > 0) sb.append(strikes).append("스트라이크 ");
+        if(balls > 0) sb.append(balls).append(CommonMessage.GAME_BALL.getMessage());
+        if(strikes > 0) sb.append(strikes).append(CommonMessage.GAME_STRIKE.getMessage());
 
         return sb.toString().trim();
     }

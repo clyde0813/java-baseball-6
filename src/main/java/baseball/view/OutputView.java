@@ -1,15 +1,16 @@
 package baseball.view;
 
 import baseball.domain.Result;
+import baseball.exception.CommonMessage;
 
 public class OutputView {
     
     public static void printGameStart() {
-        System.out.println("숫자 야구 게임을 시작합니다.");
+        System.out.println(CommonMessage.GAME_START.getMessage());
     };
 
     public static void printGameEnd() {
-        System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
+        System.out.println(CommonMessage.GAME_END.getMessage());
     };
 
     public static void printGameResult(Result result) {

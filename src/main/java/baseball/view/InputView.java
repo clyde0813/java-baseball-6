@@ -1,11 +1,13 @@
 package baseball.view;
 
+import baseball.exception.CommonMessage;
 import baseball.exception.ErrorMessage;
 import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
 
     public static String inputNumber() {
+        System.out.print(CommonMessage.GAME_INPUT_NUMBER.getMessage());
         return Console.readLine();
     };
 
