@@ -2,18 +2,23 @@ package baseball.view;
 
 import baseball.constant.CommonMessage;
 import baseball.constant.ErrorMessage;
-import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
     
-    public static String inputNumber() {
+    private final ConsoleInput consoleInput;
+
+    public InputView(ConsoleInput consoleInput) {
+        this.consoleInput = consoleInput;
+    }
+
+    public String inputNumber() {
         System.out.print(CommonMessage.GAME_INPUT_NUMBER.getMessage());
-        return Console.readLine();
+        return consoleInput.readLine();
     };
 
-    public static boolean checkRestart() {
+    public boolean checkRestart() {
         System.out.println(CommonMessage.GAME_RESTART.getMessage());
-        String input = Console.readLine();
+        String input = consoleInput.readLine();
 
         if(!input.equals("1") && !input.equals("2")) {
             throw new IllegalArgumentException(ErrorMessage.INVALID_RESTART.getMessage());
