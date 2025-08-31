@@ -8,6 +8,9 @@ import baseball.constant.ErrorMessage;
 
 public class Numbers {
 
+    private static final int NUMBER_LENGTH = 3;
+    private static final int INVALID_DIGIT = 0;
+
     private final List<Integer> values;
 
     // 비즈니스 검증 책임 - 3자리 교차 검증, 중복 검증
@@ -25,7 +28,7 @@ public class Numbers {
 
     // 입력 검증 책임 - 3자리 검증, 0 입력 검증
     public static Numbers createNumbers(String input) {
-        if(input.length() != 3) {
+        if(input.length() != NUMBER_LENGTH) {
             throw new IllegalArgumentException(ErrorMessage.INVALID_LENGTH.getMessage());
         }
 
@@ -35,7 +38,7 @@ public class Numbers {
             if(!Character.isDigit(c)) {
                 throw new IllegalArgumentException(ErrorMessage.INVALID_NUMBER.getMessage());
             }
-            if((c - '0') == 0) {
+            if((c - '0') == INVALID_DIGIT) {
                 throw new IllegalArgumentException(ErrorMessage.ZERO_NOT_ALLOWED.getMessage());
             }
 

@@ -7,13 +7,15 @@ public class Result {
     private final int strikes;
     private final int balls;
 
+    private static final int END_STRIKES = 3;
+
     public Result(int strikes, int balls) {
         this.strikes = strikes;
         this.balls = balls;
     }
 
     public boolean isEnd() {
-        return strikes == 3;
+        return strikes == END_STRIKES;
     }
 
     public int getStrikes() {
